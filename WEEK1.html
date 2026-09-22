@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Week 1 Capstone Deliverables - Ubuntu Innovations</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #222; margin: 40px; }
+  .download-bar { background: #1a365d; padding: 14px 20px; color: white; border-radius: 8px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+  .download-btn { background: #3182ce; color: white; border: none; padding: 10px 18px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 14px; }
+  .download-btn:hover { background: #2b6cb0; }
+  h1 { color: #1a365d; border-bottom: 2px solid #2b6cb0; padding-bottom: 8px; font-size: 24px; }
+  h2 { color: #2b6cb0; border-bottom: 1px solid #cbd5e0; padding-bottom: 4px; margin-top: 26px; font-size: 18px; }
+  h3 { color: #2d3748; margin-top: 18px; font-size: 15px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px; }
+  th, td { border: 1px solid #cbd5e0; padding: 9px; text-align: left; }
+  th { background-color: #edf2f7; color: #2d3748; }
+  pre { background: #f7fafc; border: 1px solid #e2e8f0; padding: 12px; border-radius: 6px; font-size: 12px; overflow-x: auto; font-family: Consolas, Monaco, monospace; }
+  .header-box { text-align: center; margin-bottom: 30px; padding: 20px 0; border-bottom: 3px solid #1a365d; }
+  .header-box h1 { border: none; margin-bottom: 4px; }
+  .meta { font-size: 13px; color: #4a5568; }
+  @media print {
+    .download-bar { display: none; }
+    body { margin: 15mm; font-size: 11pt; }
+    table, pre { page-break-inside: avoid; }
+    h2 { page-break-before: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="download-bar">
+  <span>Click to print or save this document as a PDF:</span>
+  <button class="download-btn" onclick="window.print()">Download as PDF</button>
+</div>
+
+<div class="header-box">
+  <h1>Ubuntu Innovations (Pty) Ltd</h1>
+  <h3>IT Support Capstone Project — Week 1 Comprehensive Deliverables</h3>
+  <div class="meta">
+    <strong>Scope:</strong> Exactly 25 Active Endpoints (Zero Spare Overhead) &bull; 
+    <strong>Standard:</strong> Google IT Support / CAPACITI &bull; 
+    <strong>Location:</strong> Cape Town, South Africa
+  </div>
+</div>
+
+<h2>1. Business Requirements Analysis</h2>
+<p>Ubuntu Innovations (Pty) Ltd is relocating to a modern office in Cape Town, South Africa. This infrastructure plan provisions high-throughput wired and wireless connectivity for exactly 25 active users across five departments, eliminating redundant hot-spare hardware to optimize procurement costs while maintaining operational stability.</p>
+
+<h3>Corporate Structure &amp; User Distribution (25 Endpoints Total)</h3>
+<ul>
+  <li><strong>Executive Management (3 Endpoints):</strong> 3 mobile laptops requiring confidential communication, encrypted endpoints, and boardroom Wi-Fi coverage.</li>
+  <li><strong>Finance (4 Endpoints):</strong> 4 stationary desktop workstations on dedicated Cat6 drops requiring strict subnet isolation, accounting ledger integrity, and POPIA compliance.</li>
+  <li><strong>Human Resources (3 Endpoints):</strong> 3 stationary desktop workstations requiring data privacy controls for employee records and onboarding portals.</li>
+  <li><strong>Sales &amp; Marketing (7 Endpoints):</strong> 7 stationary desktop workstations utilizing CRM workflows, client outreach, and shared marketing asset repositories.</li>
+  <li><strong>Software Development (8 Endpoints):</strong> 6 stationary desktop PCs for intensive compiling/Docker environments, plus 2 high-performance mobile laptops for Senior Lead Developers.</li>
+</ul>
+
+<h2>2. Hardware Procurement Inventory (Strictly 25 Active Endpoints)</h2>
+<table>
+  <tr>
+    <th>Asset Category</th>
+    <th>Quantity</th>
+    <th>Technical Specifications</th>
+    <th>Target Allocation &amp; Business Justification</th>
+  </tr>
+  <tr>
+    <td><strong>Desktop PCs</strong></td>
+    <td><strong>20 Units</strong></td>
+    <td>Intel Core i5 (12th Gen+), 16GB RAM, 512GB NVMe SSD, Gigabit LAN</td>
+    <td>Stationary workstations for Finance (4), HR (3), Sales (7), and Software Development (6).</td>
+  </tr>
+  <tr>
+    <td><strong>Laptops</strong></td>
+    <td><strong>5 Units</strong></td>
+    <td>Intel Core i7, 16GB RAM, 512GB NVMe SSD, Wi-Fi 6, TPM 2.0</td>
+    <td>Dedicated mobile devices for Executive Management (3) and Lead Software Developers (2).</td>
+  </tr>
+  <tr>
+    <td><strong>Firewall Router</strong></td>
+    <td><strong>1 Unit</strong></td>
+    <td>Dual-WAN Gigabit Gateway, SPI Firewall, Hardware VPN</td>
+    <td>Perimeter defense, NAT routing, DHCP scopes, and inter-VLAN traffic control.</td>
+  </tr>
+  <tr>
+    <td><strong>Managed Switch</strong></td>
+    <td><strong>1 Unit</strong></td>
+    <td>24-Port Gigabit Layer 2/3 Managed PoE+ Switch (802.1Q VLANs)</td>
+    <td>Central switching backhaul connecting 20 wired desktops, 2 APs, and 2 network printers.</td>
+  </tr>
+  <tr>
+    <td><strong>Wireless APs</strong></td>
+    <td><strong>2 Units</strong></td>
+    <td>Dual-Band Wi-Fi 6 (802.11ax), PoE-powered, ceiling mount</td>
+    <td>Enterprise wireless coverage for the 5 active laptops, boardroom presentations, and mobile devices.</td>
+  </tr>
+  <tr>
+    <td><strong>Central NAS</strong></td>
+    <td><strong>1 Unit</strong></td>
+    <td>4-Bay Rackmount NAS, 8TB Usable (RAID 5), Dual 1GbE NICs</td>
+    <td>Central departmental file repository, SMB3 shares, and automated local backup target.</td>
+  </tr>
+  <tr>
+    <td><strong>Network Printers</strong></td>
+    <td><strong>2 Units</strong></td>
+    <td>A4/A3 Multifunction Laser Printers, Gigabit Ethernet, Duplex</td>
+    <td>Workgroup printers in Finance Admin and Central Open Office with secure PIN release.</td>
+  </tr>
+  <tr>
+    <td><strong>Smart UPS</strong></td>
+    <td><strong>2 Units</strong></td>
+    <td>1500VA/900W Line-Interactive UPS with AVR &amp; Surge Suppression</td>
+    <td>Shields comms rack hardware, switch, and NAS storage against local grid power fluctuations.</td>
+  </tr>
+</table>
+
+<h2>3. Departmental Software &amp; Licensing Plan</h2>
+<table>
+  <tr>
+    <th>Department</th>
+    <th>Operating System</th>
+    <th>Productivity &amp; Specialized Tools</th>
+    <th>Endpoint Security &amp; Administration</th>
+  </tr>
+  <tr>
+    <td><strong>Executive Mgmt</strong></td>
+    <td>Windows 11 Pro 64-bit</td>
+    <td>Microsoft 365, Zoom, Slack, Adobe Acrobat Pro DC</td>
+    <td>BitLocker XTS-256, Cloud EDR, Biometric Windows Hello, MFA Authenticator</td>
+  </tr>
+  <tr>
+    <td><strong>Finance</strong></td>
+    <td>Windows 11 Pro 64-bit</td>
+    <td>Microsoft 365, Sage Pastel / QuickBooks, Excel Toolpak</td>
+    <td>BitLocker, Cloud EDR, USB Storage Read-Only Policy, Dedicated Subnet Isolation</td>
+  </tr>
+  <tr>
+    <td><strong>Human Resources</strong></td>
+    <td>Windows 11 Pro 64-bit</td>
+    <td>Microsoft 365, BambooHR / SimplePay Portal, PDF Tools</td>
+    <td>BitLocker, Cloud EDR, POPIA Compliance Directory Controls, Automated Screen Lock</td>
+  </tr>
+  <tr>
+    <td><strong>Sales &amp; Marketing</strong></td>
+    <td>Windows 11 Pro 64-bit</td>
+    <td>Microsoft 365, HubSpot CRM, Adobe Creative Cloud Suite</td>
+    <td>BitLocker, Cloud EDR, Web Threat Filtering, Central Public Share Access</td>
+  </tr>
+  <tr>
+    <td><strong>Software Dev</strong></td>
+    <td>Dual-Boot: Ubuntu 22.04 LTS / Win 11 Pro</td>
+    <td>VS Code, Git CLI, Docker Desktop, Postman, Node.js &amp; Python runtimes</td>
+    <td>LUKS / BitLocker Full-Disk Encryption, Ed25519 SSH Keypairs, Cloud EDR Agent</td>
+  </tr>
+</table>
+
+<h2>4. High-Level Network Topology &amp; Switch Port Allocation</h2>
+
+<pre>
+                 ┌────────────────────────────────┐
+                 │   Primary Fiber ISP (1 Gbps)   │
+                 └───────────────┬────────────────┘
+                                 │
+                                 ▼
+                 ┌────────────────────────────────┐
+                 │    Firewall Router / Gateway   │
+                 │        (192.168.1.1)           │
+                 └───────────────┬────────────────┘
+                                 │
+                                 ▼
+                 ┌────────────────────────────────┐       ┌───────────────────────┐
+                 │ 24-Port Gigabit Managed Switch │◄──────┤   1500VA Smart UPS    │
+                 │     (VLANs 10, 20, 30, 40)     │       │ Surge/Power Shielding │
+                 └──┬───────────┬───────────┬─────┘       └───────────────────────┘
+                    │           │           │
+       ┌────────────┘           │           └─────────────┐
+       ▼                        ▼                         ▼
+┌──────────────┐         ┌──────────────┐          ┌──────────────┐
+│  20 Desktops │         │  2x WAPs     │          │  2x Printers │
+│  Ports 1–20  │         │  Ports 21–22 │          │  Ports 23–24 │
+│ (Fixed Drops)│         │ (5 Laptops)  │          │ (Static IP)  │
+└──────────────┘         └──────────────┘          └──────────────┘
+                                │
+                                ▼ [Dedicated SFP / Trunk Uplink]
+                         ┌──────────────┐
+                         │8TB Rack NAS  │
+                         │ RAID 5 Share │
+                         └──────────────┘
+</pre>
+
+<h3>Switch Port Provisioning (24 Ports Mapped)</h3>
+<ul>
+  <li><strong>Ports 1–20 (VLAN 20 - Workstations):</strong> Dedicated Cat6 drops for all 20 fixed desktop PCs:
+    <ul>
+      <li>Ports 1–4: Finance (4 drops)</li>
+      <li>Ports 5–7: Human Resources (3 drops)</li>
+      <li>Ports 8–14: Sales &amp; Marketing (7 drops)</li>
+      <li>Ports 15–20: Software Development (6 drops)</li>
+    </ul>
+  </li>
+  <li><strong>Ports 21–22 (VLAN 40 - Wireless Infrastructure, PoE+):</strong> Uplinks to the 2x Wi-Fi 6 Access Points providing wireless mobility for the 5 company laptops.</li>
+  <li><strong>Ports 23–24 (VLAN 30 - Network Peripherals):</strong> Dedicated static Ethernet connections for the 2x Network Multifunction Laser Printers.</li>
+  <li><strong>SFP / Trunk Uplink (VLAN 10 - Servers &amp; Storage):</strong> High-speed interface directly connecting the 8TB Central NAS and Firewall Router.</li>
+</ul>
+
+<h2>5. Tier-1 Troubleshooting Standard Operating Procedures (SOPs)</h2>
+
+<h3>Incident 1: Desktop Workstation Fails to Power On (Hardware Support)</h3>
+<p><strong>Symptoms:</strong> User presses front power switch; zero fan spin, no chassis or motherboard LEDs, monitor displays "No Signal".</p>
+<ol>
+  <li>Confirm the IEC C13 power cable is firmly seated into the desktop power supply and the wall/desk power rail.</li>
+  <li>Verify the desk power strip switch is ON and illuminated; test socket voltage with a known-good test device.</li>
+  <li>Inspect the rear PSU rocker switch and ensure it is toggled to the "I" (ON) position.</li>
+  <li>Swap the IEC power cord with a verified working unit to rule out internal wire breaks.</li>
+  <li>Perform a flea-power discharge: disconnect the power lead, hold the power button down for 30 seconds, reconnect power, and attempt to boot.</li>
+  <li>If the unit remains unresponsive, open the side chassis to verify the 24-pin ATX power harness and test PSU output with a hardware power supply tester.</li>
+</ol>
+<p><em>Verification:</em> Desktop powers on, fans spin, motherboard passes POST with a single beep, and the OS boots to login prompt.</p>
+
+<h3>Incident 2: Endpoint Experiences Complete Internet &amp; Network Loss (Network Support)</h3>
+<p><strong>Symptoms:</strong> Browser reports <code>DNS_PROBE_FINISHED_NO_INTERNET</code>; system tray shows a globe/warning icon ("No Internet Access").</p>
+<ol>
+  <li>Inspect the physical RJ45 wall drop and PC NIC port: verify link and activity LEDs are actively illuminated.</li>
+  <li>Open Command Prompt / Terminal and run <code>ipconfig /all</code> (or <code>ip a</code>) to verify if the machine has a valid VLAN 20 IP (<code>192.168.20.X</code>) or an APIPA address (<code>169.254.X.X</code>).</li>
+  <li>Test the local TCP/IP stack: <code>ping 127.0.0.1</code>.</li>
+  <li>Test the local default gateway: <code>ping 192.168.1.1</code>.</li>
+  <li>Test external connectivity and DNS resolution: <code>ping 8.8.8.8</code> followed by <code>nslookup google.com</code>.</li>
+  <li>Replace damaged patch cord with a certified Cat6 snagless cable or toggle the network interface card.</li>
+</ol>
+<p><em>Verification:</em> Machine obtains a valid DHCP lease from the router and external web pages load without latency.</p>
+
+<h3>Incident 3: Shared Network Laser Printer Displays "Offline" (Peripheral Support)</h3>
+<p><strong>Symptoms:</strong> Print jobs stall in queue with status "Error - Offline"; users across HR and Finance cannot print.</p>
+<ol>
+  <li>Inspect printer touchscreen for paper jam alerts, out-of-toner notifications, or active sleep lockup.</li>
+  <li>Print a Configuration Sheet from the printer hardware menu to confirm link status and assigned IP address.</li>
+  <li>Ping the printer's static IP (<code>192.168.30.10</code>) from an admin workstation and verify access to its Embedded Web Server (EWS).</li>
+  <li>Verify on the firewall router that the printer's MAC address is assigned to its permanent static DHCP reservation.</li>
+  <li>Restart the local print subsystem via administrative command line: <code>net stop spooler &amp;&amp; net start spooler</code>.</li>
+</ol>
+<p><em>Verification:</em> Printer status updates to "Ready" across all client queues, and a printer test page prints successfully.</p>
+
+</body>
+</html>
