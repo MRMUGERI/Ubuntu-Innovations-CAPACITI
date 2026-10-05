@@ -1,6 +1,6 @@
 # Design and Implementation of an IT Infrastructure and Support Solution for Ubuntu Innovations (Pty) Ltd
 
-**Program:** CAPACITI (A Division of UVU Africa) – Google IT Support Professional Certificate Stream
+**Program:** CAPACITI (A Division of UVU Africa) 
 
 **Project Duration:** Four-Week Capstone Project
 
